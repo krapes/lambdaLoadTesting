@@ -6,6 +6,5 @@ python:
 services:
   - docker
 
-
 script:
   - ./run.sh
