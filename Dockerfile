@@ -18,7 +18,8 @@ RUN npm install -g serverless
 RUN serverless --version
 
 RUN cd
-COPY . ./usercode
+COPY serviceFiles ./usercode
+COPY dockerFiles ./usercode
 WORKDIR usercode
 RUN pip install -r requirements.txt
 
