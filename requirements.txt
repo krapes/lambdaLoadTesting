@@ -5,7 +5,7 @@ docutils==0.14
 jmespath==0.9.4
 pyasn1==0.4.5
 python-dateutil==2.8.0
-PyYAML==3.13
+pyyaml>=4.2b1
 rsa==3.4.2
 s3transfer==0.2.0
 six==1.12.0
