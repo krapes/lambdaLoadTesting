@@ -2,6 +2,7 @@
 
 
 if [[ -z "${aws_access_key_id}" ]]; then
+
   AWS_ACCESS_KEY_ID=$(aws --profile default configure get aws_access_key_id)
 else
   echo "AWS access key found"
