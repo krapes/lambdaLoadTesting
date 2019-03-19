@@ -7,4 +7,5 @@ services:
   - docker
 
 
-script: - ./run.sh
+script:
+  - ./run.sh
