@@ -8,7 +8,7 @@ declare -a endpoints=$(python endpointsParser.py deploy.out)
 
 for endpoint in "${endpoints[@]}"; do
      echo "----- Testing Endpoint $endpoint -----"
-     /../work/bin/hey -n 5000 -c 50 "$endpoint"
+     /../work/bin/hey -n 50 -c 50 "$endpoint"
 done
 
 sls remove
