@@ -4,6 +4,7 @@
 if [[ -z "${aws_access_key_id}" ]]; then
   AWS_ACCESS_KEY_ID=$(aws --profile honestAbe configure get aws_access_key_id)
 else
+  echo "AWS access key found"
   AWS_ACCESS_KEY_ID="${aws_access_key_id}"
 fi
 
@@ -12,7 +13,8 @@ fi
 if [[ -z "${aws_secret_access_key}" ]]; then
   AWS_SECRET_ACCESS_KEY=$(aws --profile honestAbe configure get aws_secret_access_key)
 else
-  AWS_ACCESS_KEY_ID="${aws_secret_access_key}"
+  echo "aws secret access key found"
+  AWS_SECRET_ACCESS_KEY="${aws_secret_access_key}"
 fi
 
 #AWS_SECRET_ACCESS_KEY=$(aws --profile honestAbe configure get aws_secret_access_key)
