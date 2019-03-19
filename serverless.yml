@@ -1,0 +1,65 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: stackoverflow # NOTE: update this with your service name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: python3.7
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  #profile: ${opt:profile, 'honestAbe'}
+  accountId: ${opt:accountid, '647623539426'}
+  environment:
+    region: ${self:provider.region}
+    stage: ${self:provider.stage}
+  stackTags:
+    Owner : krapes
+    Project : concurrencyLimits
+    Service : concurrencyLimits
+    Team : brokenLeg
+  stackPolicy: # This policy allows updates to all resources
+    - Effect: Allow
+      Principal: "*"
+      Action: "Update:*"
+      Resource: "*"
+
+  iamRoleStatements:
+
+
+
+functions:
+  dummy:
+    handler: dummy.main
+    timeout: 10
+    reservedConcurrency: 25
+    events:
+      - http:
+          method: GET
+          path: /dummy
+          resp: json
+
+
+
+
+#plugins:
+#  - serverless-python-requirements
+
+
+custom:
+  pythonRequirements:
+     dockerizePip: non-linux
