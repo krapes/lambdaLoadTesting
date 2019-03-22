@@ -23,6 +23,9 @@ COPY dockerFiles ./usercode
 WORKDIR usercode
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["bash", "start.sh", "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_REGION"]
+
+ENTRYPOINT ["bash", "start.sh", "AWS_ACCESS_KEY_ID", \
+            "AWS_SECRET_ACCESS_KEY", "AWS_REGION", \
+            "NUM_OF_REQUESTS", "NUM_OF_CONCURRENT"]
 
 RUN echo "Done"
