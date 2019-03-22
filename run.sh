@@ -34,11 +34,13 @@ fi
 
 AWS_REGION=us-east-1
 
+
 num_of_request=${num_of_request:-1000}
 num_of_concurrent=${num_of_concurrent:-50}
 
 NUM_OF_REQUESTS=${NUM_OF_REQUESTS:-num_of_request}
 NUM_OF_CONCURRENT=${NUM_OF_CONCURRENT:-num_of_concurrent}
+
 
 
 docker build -t concurrency:latest  .
