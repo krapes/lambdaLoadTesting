@@ -22,8 +22,6 @@ provider:
   runtime: python3.7
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'us-east-1'}
-  #profile: ${opt:profile, 'honestAbe'}
-  accountId: ${opt:accountid, '647623539426'}
   environment:
     region: ${self:provider.region}
     stage: ${self:provider.stage}
