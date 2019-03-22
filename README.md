@@ -30,7 +30,7 @@ Now your project is ready to run.
 1) Navigate to the top folder _lambdaLoadTesting_
 2) In the command line execute:
 ````
-$ run.sh
+$ bash run.sh
 `````
 3) Wait for your results to appear in the terminal
 
