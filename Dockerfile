@@ -23,9 +23,6 @@ COPY dockerFiles ./usercode
 WORKDIR usercode
 RUN pip install -r requirements.txt
 
-RUN echo "------- variables ------"
-RUN echo $NUM_OF_REQUESTS
-RUN echo $NUM_OF_CONCURRENT
 
 ENTRYPOINT ["bash", "start.sh", "AWS_ACCESS_KEY_ID", \
             "AWS_SECRET_ACCESS_KEY", "AWS_REGION", \
