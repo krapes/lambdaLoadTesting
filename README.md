@@ -47,5 +47,12 @@ Options:
   -p  The AWS profile that will be used for AWS Access Key and Secret Key
   ```
 
+## Tender Loving Care
+
+This project is far from complete. The ultimate vison would be a _pytest_ like package that could be run with any Serverless Framework Service and produce a visual / analitical output of how it behaved under load. Taking it a step further would be to return warning statements for areas of weakness. 
+
+#### Any comments, suggestions, critiques, or recommendations are very much welcomed. Please feel free to open a pull request, create an issue, or email at kerri.rapes@gmail.com 
+
+I would love to hear what was liked, not liked, and given your specific background what would be changed. Peace, Kerri
 
 
