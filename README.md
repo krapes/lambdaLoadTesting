@@ -23,11 +23,12 @@ Now we can bring the project to your local computer and prepare it for the tests
 $ git clone https://github.com/krapes/lambdaLoadTesting.git
 ````
 2) Modify the _serviceFiles_ directory with your service files.
-    A) Navigate to the _serviceFiles_ directory. Currently it contains a _dummy_ lambda and the serverless.yml
 
-    B) If you would like to test the load preformance of one lambda simply replace the code inside dummy.py with your       function. (Make sure the file is still named dummy.py and that your lambda starts from main(event, context)    )
+   Navigate to the _serviceFiles_ directory. Currently it contains a _dummy_ lambda and the serverless.yml
 
-    C) If you have multiple files you can replace the whole folder with your service. The program will deploy your service, test all of the created endpoints, and then remove the service. It's recommand that you change to name of the service inside your _serverless.yml_ file so as to not affect your normal service. 
+   If you would like to test the load preformance of one lambda simply replace the code inside dummy.py with your       function. (Make sure the file is still named dummy.py and that your lambda starts from main(event, context)    )
+
+   If you have multiple files you can replace the whole folder with your service. The program will deploy your service, test all of the created endpoints, and then remove the service. It's recommand that you change to name of the service inside your _serverless.yml_ file so as to not affect your normal service. 
 
 ### Run
 Now your project is ready to run.
