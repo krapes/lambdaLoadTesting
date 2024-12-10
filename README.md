@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/krapes/lambdaLoadTesting.svg?branch=master)](https://travis-ci.org/krapes/lambdaLoadTesting)
 
 # Lambda Load Testing
+
+
 This small program designed simplify load testing of a AWS Service. The project was inspired by the blog [Managing AWS Lambda Function Concurrency](https://aws.amazon.com/blogs/compute/managing-aws-lambda-function-concurrency/) and is powered by the [HEY!](https://github.com/rakyll/hey) project. The vision of the project is to reduce some of the setup time for lambda load testing and evade installiation frustrations by containing everything in Docker images. 
 
 For the step-by-step breakdown of request limits, throttling, and reserved concurrency check out the blog post [The Everything Guide to Lambda Throttling, Reserved Concurrency, and Execution Limits](https://medium.com/@kerri.rapes/the-everything-guide-to-lambda-throttling-reserved-concurrency-and-execution-limits-d64f144129e5)
@@ -22,11 +24,12 @@ Now we can bring the project to your local computer and prepare it for the tests
 $ git clone https://github.com/krapes/lambdaLoadTesting.git
 ````
 2) Modify the _serviceFiles_ directory with your service files.
-    * Navigate to the _serviceFiles_ directory. Currently it contains a _dummy_ lambda and the serverless.yml
 
-    * If you would like to test the load preformance of one lambda simply replace the code inside dummy.py with your function. _(Make sure the file is still named dummy.py and that your lambda starts from main(event, context)    )_
+   Navigate to the _serviceFiles_ directory. Currently it contains a _dummy_ lambda and the serverless.yml
 
-    * If you have multiple files you can replace the whole folder with your service. The program will deploy your service, test all of the created endpoints, and then remove the service. It's recommand that you change to name of the service inside your _serverless.yml_ file so as to not affect your normal service. 
+   If you would like to test the load preformance of one lambda simply replace the code inside dummy.py with your       function. (Make sure the file is still named dummy.py and that your lambda starts from main(event, context)    )
+
+   If you have multiple files you can replace the whole folder with your service. The program will deploy your service, test all of the created endpoints, and then remove the service. It's recommand that you change to name of the service inside your _serverless.yml_ file so as to not affect your normal service. 
 
 ### Run
 Now your project is ready to run.
