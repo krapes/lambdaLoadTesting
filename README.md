@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/krapes/lambdaLoadTesting.svg?branch=master)](https://travis-ci.org/krapes/lambdaLoadTesting)
+
 # Lambda Load Testing
 This small program designed simplify load testing of a AWS Service. The project was inspired by the blog [Managing AWS Lambda Function Concurrency](https://aws.amazon.com/blogs/compute/managing-aws-lambda-function-concurrency/) and is powered by the [HEY!](https://github.com/rakyll/hey) project. The vision of the project is to reduce some of the setup time for lambda load testing and evade installiation frustrations by containing everything in Docker images. 
 
